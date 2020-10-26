@@ -1,0 +1,34 @@
+  
+{
+    "name": "nightwatch-fivem",
+    "version": "1.0.0",
+    "description": "A open source bot made for FiveM  & Discord",
+    "main": "NightWatch-StartUp.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "npm install && node NightWatch-StartUp.js"
+    },
+    "author": "IceyyM8",
+    "license": "ISC",
+    "dependencies": {
+      "ascii-table": "0.0.9",
+      "axios": "^0.19.0",
+      "bot-utils": "^1.4.2",
+      "common-tags": "^1.8.0",
+      "dateformat": "^3.0.3",
+      "discord-leveling": "^1.1.0",
+      "discord-warns": "^0.1.5",
+      "discord.js": "^12.2.0",
+      "fetch-json": "^2.2.6",
+      "fluture": "^12.0.2",
+      "fs": "0.0.1-security",
+      "gamedig": "^2.0.20",
+      "github-update-checker": "^1.2.0",
+      "got": "^10.0.4",
+      "notification-logger": "0.0.0",
+      "smol-jsonp": "^1.0.0",
+      "then-read-json": "^1.0.3",
+      "unfluff": "^3.2.0"
+    }
+  }
+  

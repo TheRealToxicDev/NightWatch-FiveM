@@ -4,7 +4,7 @@ async function checkVs(current) {
 
     try {
 
-        let version = await axios.get('https://github.com/TheRealToxicDev/NightWatch-FiveM/blob/master/src/local/version.json')
+        let version = await axios.get('https://github.com/TheRealToxicDev/NightWatch-FiveM/blob/master/local/version.json')
 
         version = version.data;
 
