@@ -1,11 +1,14 @@
-const { RichEmbed } = require('discord.js')
+const { Discord, MessageEmbed } = require('discord.js')
+
 module.exports = {
         name: "ban",
         category: "admin",
         description: "Ban a user by mention!",
         run: async (client, message, args, config, language) => {
+
             await message.delete()
-            const logerchannel = message.guild.channels.find(channel => channel.name === `${config.logchannel}`) || message.channel;
+
+            const logerchannel = message.guild.channels.cache.find(channel => channel.name === `${config.logchannel}`) || message.channel;
 
             if (!args[0]){
                 return message.reply(`${language.mention}`)
@@ -41,7 +44,7 @@ module.exports = {
                 return message.reply(`${language.notbannable}`)
             }
 
-                const embed = new RichEmbed()
+                const embed = new MessageEmbed()
                 .setAuthor(`${config.shortname} Bans`)
                 .setColor(`${config.color}`)
                 .setThumbnail(`${config.logo}`)
@@ -49,8 +52,11 @@ module.exports = {
                 .setDescription(`Ban Reason: ${reason}}`)
                 .addField(`User Banned`, `${banned} | ${banned.id}`)
                 .addField(`Banned by`, `${message.author.username} | ${message.author.id}`)
+ 
                 await logchannel.send(embed).then(async banned => {
-                    await banned.ban(`${reason}}`)
+                    
+                  await banned.ban(`${reason}}`)
+
                     if (error) return logerchannel.send(`${throwerr} ${error}`)
                 })
             }
