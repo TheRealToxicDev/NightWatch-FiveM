@@ -1,4 +1,5 @@
-const { RichEmbed } = require('discord.js')
+const { Discord, MessageEmbed } = require('discord.js')
+
 module.exports = {
         name: "announce",
         category: "admin",
@@ -20,7 +21,7 @@ module.exports = {
 
                 var announcchannel = message.guild.channels.cache.find(channel => channel.name === `${config.announcementschannel}`) || message.channel;
                 
-            let embed = new RichEmbed()
+            let embed = new MessageEmbed()
                 .setAuthor(`${language.annfrom} ${message.author.username}`)
                 .setColor(`${config.color}`)
                 .setDescription(`${language.sentfrom} ${message.channel.name} by ${message.author.username}`)
