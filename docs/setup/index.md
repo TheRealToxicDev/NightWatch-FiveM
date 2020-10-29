@@ -15,4 +15,5 @@ Follow these steps to run the bot
 
 #### Self Host
 * Run install-depend.bat (if you haven't already) and wait for it to finish
+* Open and Edit the Config File
 * Run NightWatch-StartUp.bat and wait for a response.
