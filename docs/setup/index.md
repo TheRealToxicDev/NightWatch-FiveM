@@ -14,6 +14,5 @@ A Discord Bot made to interact with and Moderate your FiveM Server.
 Follow these steps to run the bot
 
 #### Self Host
-* Run install-depend.bat and wait for it to finish
-* Next go to src/config/config.json and edit these values
-* Open your Command Prompt in the Directory and Run `node NightWatch-StartUp.js`
+* Run install-depend.bat (if you haven't already) and wait for it to finish
+* Run NightWatch-StartUp.bat and wait for a response.
