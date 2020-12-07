@@ -19,7 +19,7 @@ const config = require('./config/config.json')
 const supports = require('./local/supported.json')
 const activityUp = require('./functions/actUpdater.js')
 
-require(`./src/local/${config.language}.json`)
+require(`./local/${config.language}.json`)
 
 if (config.language == "en") {
     let language = "en"
@@ -36,16 +36,16 @@ if (config.language == "en") {
 } else if (config.langauge == "de") {
     console.log(`[${config.shortname}]  Sprache auf deutsch gesetzt`)
 }
-let language = require(`./src/local/${config.language}`)
+let language = require(`./local/${config.language}`)
 
 client.commands = new Collection();
 client.aliases = new Collection();
 
 ["command"].forEach(handler => {
-    require(`./src/handlers/${handler}`)(client)
+    require(`./handlers/${handler}`)(client)
 });
 
-client.categories = readdirSync ('./src/commands/');
+client.categories = readdirSync ('./commands/');
 
 // ON READY EVENT (TELLS THE BOT WHAT TO DO ON LOAD)
 client.on('ready', async() => {
