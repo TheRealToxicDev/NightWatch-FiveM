@@ -45,7 +45,7 @@ client.aliases = new Collection();
     require(`./handlers/${handler}`)(client)
 });
 
-client.categories = readdirSync ('./commands/');
+client.categories = readdirSync ('./commands');
 
 // ON READY EVENT (TELLS THE BOT WHAT TO DO ON LOAD)
 client.on('ready', async() => {
